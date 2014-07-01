@@ -24,9 +24,11 @@ script:
 before_deploy: cd scikit-image/dist
 deploy:
   provider: cloudfiles
-  username: travis-worker
+  username: jjhelmus
   api_key:
     secure: GSgkzgY1cq7mzp0oJpgbLuyY9N0nZTEH/i7OVljSaNv9CecWFaHgfRG/ErIyBx0BsL1X9FXra1YDpBj6PD0rvwpI3KG+z6pNn1jCf4caUij/PljaQaEUSPWdU0aM+BKirklpH1wM04mc9ESp7yu0Zk2CAuANiKjYq9MqO0gcoRU=
   region: ORD
   container: wheels
   skip_cleanup: true
+  api-key:
+    secure: dImvSiPY/LKX0cmWOq+UY9ye2zt9x43sk8dutJG6IsuhAsiWFYzvwTuQZea1WzmD5pOJngezIzXRr3e9tXIZ2UPFFye2/MM6RBM21RsLBAowhXQWUNnW02WkMLkWaROhvcWWWrROrvDs+2HgWssv3FMYfiF+14xXE05t4BVZOog=
