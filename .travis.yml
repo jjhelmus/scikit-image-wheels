@@ -21,7 +21,6 @@ script:
 - cd tmp_for_test
 - nosetests --exe -v skimage
 - cd ..
-before_deploy: cd scikit-image/dist
 deploy:
   provider: pypi
   user: jjhelmus
