@@ -23,10 +23,17 @@ script:
 - cd ..
 before_deploy: cd scikit-image/dist
 deploy:
-  provider: cloudfiles
-  username: jjhelmus
-  api-key:
-    secure: gPIeSHc1fJ+njTlqGxXAqNpFEqBfzupQFs2YT60dGEFury2pvYDW0O1hdRbuK4Q3D/uokYkFytY7QDBR2s/Mm92rYfUfqKV/qeFD2UhO8ZQ8iaRY2qP4ImbFzzdpq7PlJcoAoolsjroAzO1/NKGhpKj+oRAEnSZW0g+z1ug+g5s=
-  region: ORD
-  container: wheels
-  skip_cleanup: true
+  - provider: cloudfiles
+    username: jjhelmus
+    api-key:
+      secure: gPIeSHc1fJ+njTlqGxXAqNpFEqBfzupQFs2YT60dGEFury2pvYDW0O1hdRbuK4Q3D/uokYkFytY7QDBR2s/Mm92rYfUfqKV/qeFD2UhO8ZQ8iaRY2qP4ImbFzzdpq7PlJcoAoolsjroAzO1/NKGhpKj+oRAEnSZW0g+z1ug+g5s=
+    region: ORD
+    container: wheels
+    skip_cleanup: true
+  - provider: pypi
+    user: jjhelmus
+    password:
+      secure: OhQrIv2TJJ9lrmvNxjx/BZGqvpbG/HanFOkQEff9WhIfLPx40I6ZJAlSnhYeKe9hX/ErgMGAmcn1LWxXyRaPA7BBxKYxk2FL4G0I3NhPYbqiQeuk7E217xAfZPP+/+pbVJnyAiA6RNPE239vZ/QZZSj1itD/oH6Lsas6RYrrQUk=
+    server: https://testpypi.python.org/pypi
+    distributions: bdist_wheel
+    skip-cleanup: true
